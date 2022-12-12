@@ -45,10 +45,11 @@ pip install -r requirements.txt
 python manage.py migrate
 
 python manage.py runserver
-
-# Run Celery worker to work in background
-celery -A django_celery worker -l info
-
 ```
 
+# Run Celery worker to work in background
+After running python server, you have to open a new terminal and has to start the celery server so that it can run in background
+```
+celery -A django_celery worker -l info
+```
 Open Browser and Type http://127.0.0.1:8000
